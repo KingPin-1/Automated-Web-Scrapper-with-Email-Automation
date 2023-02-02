@@ -31,7 +31,9 @@ content += ('<br><br>End Of Message')
 print('Composing Email')
 SERVER = 'smtp-mail.outlook.com'
 PORT = 587
-
+FROM = '1901330100158@niet.co.in'
+TO = 'mohdathar1991@gmail.com'
+PASS = 'K@whiL3onard'
 
 
 
