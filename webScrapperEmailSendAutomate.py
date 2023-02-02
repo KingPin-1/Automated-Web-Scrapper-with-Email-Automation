@@ -10,7 +10,7 @@ now = datetime.now()
 content = ''
 
 def extract(url):
-    print("Extracting Headlines from Noteboookcheck...")
+    print("Extracting Headlines...")
     strs = ""
     strs += ('<b>HN Top Stories:</b>' + '-'*50 + '<br>')
     response = requests.get(url)
@@ -25,19 +25,18 @@ cnt = extract('https://news.ycombinator.com/')
 content += cnt
 content += ('<br>---------<br>')
 content += ('<br><br>End Of Message')
-# print(content,now) Data scrapped successfully
 
 #Email Automation
 print('Composing Email')
 SERVER = 'smtp-mail.outlook.com'
 PORT = 587
-FROM = '1901330100158@niet.co.in'
-TO = 'mohdathar1991@gmail.com'
-PASS = 'K4whiL3onard'
+FROM = 'userEmail@domain.com'
+TO = 'receiverMail@domain.com'
+PASS = 'UserPassword'
 
 msg = MIMEMultipart()
 
-msg['Subject'] = "Mohd Athar -> Top stories from HN [Automated Mail]" + str(now.day) + '-' + str(now.month) + '-' + str(now.year)
+msg['Subject'] = "[Automated Mail] Top stories from HN" + str(now.day) + '-' + str(now.month) + '-' + str(now.year)
 msg['From'] = FROM
 msg['To'] = TO
 
